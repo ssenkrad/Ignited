@@ -2,8 +2,6 @@ PODS:
   - Alamofire (4.8.2)
   - DeltaCore (0.1):
     - ZIPFoundation
-  - DSDeltaCore (0.1):
-    - DeltaCore
   - GBADeltaCore (0.1):
     - DeltaCore
   - GBCDeltaCore (0.1):
@@ -43,7 +41,6 @@ PODS:
 
 DEPENDENCIES:
   - DeltaCore (from `Cores/DeltaCore`)
-  - DSDeltaCore (from `Cores/DSDeltaCore`)
   - GBADeltaCore (from `Cores/GBADeltaCore`)
   - GBCDeltaCore (from `Cores/GBCDeltaCore`)
   - Harmony (from `External/Harmony`)
@@ -70,8 +67,6 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   DeltaCore:
     :path: Cores/DeltaCore
-  DSDeltaCore:
-    :path: Cores/DSDeltaCore
   GBADeltaCore:
     :path: Cores/GBADeltaCore
   GBCDeltaCore:
@@ -92,7 +87,6 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   DeltaCore: ec83cab4816b9c35142d942a4571a34c9151e92b
-  DSDeltaCore: 6f8265f23945120bbc9abdf1b0a3757c2d9c0c01
   GBADeltaCore: ce848d2288fbfbac1d9e31720a35de5e37d50b1b
   GBCDeltaCore: 40d84ca955e09135555e05755e5cc00a4b04ff8e
   Harmony: 519a8eb6dd06f5ee8c35ad2ca75d908923329f53
@@ -108,6 +102,6 @@ SPEC CHECKSUMS:
   SwiftyDropbox: 7e864f1e826bfc1b9b53a5edccef6c8d5fbe9e3b
   ZIPFoundation: b8c29ea7ae353b309bc810586181fd073cb3312c
 
-PODFILE CHECKSUM: 894b1d65b404f297769143034b7aadb10ef63ac9
+PODFILE CHECKSUM: c59b0d626b55416c4b6d39f1806f22abc662da17
 
-COCOAPODS: 1.14.3
+COCOAPODS: 1.16.2

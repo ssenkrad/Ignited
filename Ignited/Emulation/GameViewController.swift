@@ -20,8 +20,6 @@ import GPGXDeltaCore
 import SNESDeltaCore
 import Systems
 
-import struct DSDeltaCore.DS
-
 import Roxas
 
 private var kvoContext = 0
@@ -568,13 +566,6 @@ extension GameViewController
     {
         super.viewDidAppear(animated)
         
-        if self.emulatorCore?.deltaCore == DS.core, UserDefaults.standard.desmumeDeprecatedAlertCount < 3
-        {
-            ToastView.show(NSLocalizedString("DeSmuME Core Deprecated", comment: ""), in: self.view, detailText: NSLocalizedString("Switch to the melonDS core in Settings for latest improvements.", comment: ""), onEdge: .top, duration: 5.0)
-            
-            UserDefaults.standard.desmumeDeprecatedAlertCount += 1
-        }
-        
         self.activateRewindTimer()
         self.setPlaytimeStart()
     }
@@ -811,12 +802,6 @@ extension GameViewController
             
             switch self.game?.type
             {
-            case .ds? where self.emulatorCore?.deltaCore == DS.core:
-                // Cheats are not supported by DeSmuME core.
-                pauseViewController.cheatCodesItem = nil
-                // Microphone is not supported by DeSmuME core.
-                pauseViewController.microphoneItem = nil
-                
             case .genesis?, .ms?, .gg?:
                 // GPGX core does not support cheats yet.
                 pauseViewController.cheatCodesItem = nil
@@ -3741,11 +3726,6 @@ private extension GameViewController
         }))
         self.present(alertController, animated: true, completion: nil)
     }
-}
-
-private extension UserDefaults
-{
-    @NSManaged var desmumeDeprecatedAlertCount: Int
 }
 
 //MARK: - Timer -

@@ -295,7 +295,6 @@
 		BFCEA67E1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFCEA67D1D56FF640061A534 /* UIViewControllerContextTransitioning+Conveniences.swift */; };
 		BFD097211D3A01B8005A44C2 /* SaveStatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3540041C5DA70400C1184C /* SaveStatesViewController.swift */; };
 		BFDB3418219E4B1700595A62 /* SyncStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB3417219E4B1700595A62 /* SyncStatusViewController.swift */; };
-		BFDCA1E6244EBAA900B8FBDB /* liblibDeSmuME.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFDCA1E5244EBAA900B8FBDB /* liblibDeSmuME.a */; };
 		BFDD04F11D5E2C27002D450E /* GameCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDD04F01D5E2C27002D450E /* GameCollectionViewController.swift */; };
 		BFE022A01F5B57FF0052D888 /* PopoverMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0229F1F5B577D0052D888 /* PopoverMenuButton.swift */; };
 		BFE4269E1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE4269D1D9C68E600DC913F /* SaveStatesStoryboardSegue.swift */; };
@@ -741,7 +740,6 @@
 				BF69FBAA23E399AA0051BEEA /* CoreMotion.framework in Frameworks */,
 				BF69FBA223E375A20051BEEA /* libVBA-M.a in Frameworks */,
 				BFFDF04623E3D3A600931B96 /* libMupen64Plus.a in Frameworks */,
-				BFDCA1E6244EBAA900B8FBDB /* liblibDeSmuME.a in Frameworks */,
 				AC720C0D29FDC0C700483B47 /* libFeatures.a in Frameworks */,
 				BFCADF1E25D22FE2008D78FB /* Systems.framework in Frameworks */,
 				BF69FBC923E3A8380051BEEA /* libNestopia.a in Frameworks */,
@@ -1846,8 +1844,6 @@
 				AC68690B2C00EFF10091B693 /* PBXTargetDependency */,
 			);
 			name = Ignited;
-			packageProductDependencies = (
-			);
 			productName = Delta;
 			productReference = BFFA71D71AAC406100EE9DD1 /* Ignited.app */;
 			productType = "com.apple.product-type.application";
@@ -1911,8 +1907,6 @@
 				Base,
 			);
 			mainGroup = BFFA71CE1AAC406100EE9DD1;
-			packageReferences = (
-			);
 			productRefGroup = BFFA71D81AAC406100EE9DD1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1979,7 +1973,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Ignited/Pods-Ignited-resources.sh",
-				"${PODS_CONFIGURATION_BUILD_DIR}/DSDeltaCore/DSDeltaCore.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/DeltaCore/DeltaCore.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GBADeltaCore/GBADeltaCore.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/GBCDeltaCore/GBCDeltaCore.bundle",
@@ -1996,7 +1989,6 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DSDeltaCore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DeltaCore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GBADeltaCore.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GBCDeltaCore.bundle",
@@ -2766,7 +2758,22 @@
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				OTHER_LDFLAGS = (
 					"-ld_classic",
-					"$(inherited)",
+					"-ObjC",
+					"-l\"GBADeltaCore\"",
+					"-l\"GBCDeltaCore\"",
+					"-l\"ZIPFoundation\"",
+					"-l\"SwiftyDropbox\"",
+					"-l\"SQLite.swift\"",
+					"-l\"SNESDeltaCore\"",
+					"-l\"SMCalloutView\"",
+					"-l\"SDWebImage\"",
+					"-l\"Roxas\"",
+					"-l\"NESDeltaCore\"",
+					"-l\"N64DeltaCore\"",
+					"-l\"MelonDSDeltaCore\"",
+					"-l\"Harmony\"",
+					"-l\"KeychainAccess\"",
+					"-l\"Alamofire\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER_DEBUG)";
@@ -2807,7 +2814,22 @@
 				MARKETING_VERSION = "$(MARKETING_VERSION)";
 				OTHER_LDFLAGS = (
 					"-ld_classic",
-					"$(inherited)",
+					"-ObjC",
+					"-l\"GBADeltaCore\"",
+					"-l\"GBCDeltaCore\"",
+					"-l\"ZIPFoundation\"",
+					"-l\"SwiftyDropbox\"",
+					"-l\"SQLite.swift\"",
+					"-l\"SNESDeltaCore\"",
+					"-l\"SMCalloutView\"",
+					"-l\"SDWebImage\"",
+					"-l\"Roxas\"",
+					"-l\"NESDeltaCore\"",
+					"-l\"N64DeltaCore\"",
+					"-l\"MelonDSDeltaCore\"",
+					"-l\"Harmony\"",
+					"-l\"KeychainAccess\"",
+					"-l\"Alamofire\"",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -DIMPACTOR";
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
