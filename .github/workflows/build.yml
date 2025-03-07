@@ -10,7 +10,7 @@ jobs:
       matrix:
         include:
           - os: 'macos-latest'
-            version: '16.2'
+            version: '15.4'
 
     runs-on: ${{ matrix.os }}
     steps:
