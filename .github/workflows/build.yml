@@ -29,8 +29,8 @@ jobs:
 
       - name: Build Ignited
         run: |
-          xcodebuild -project Delta.xcodeproj \
-          -scheme Delta \
+          xcodebuild -project Ignited.xcodeproj \
+          -scheme Ignited \
           -sdk iphoneos \
           archive -archivePath ./archive \
           CODE_SIGNING_REQUIRED=NO \
